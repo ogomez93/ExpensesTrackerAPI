@@ -5,4 +5,5 @@ class User < ApplicationRecord
   validates :phone_number, format: { with: /\A\d+\z/, message: "%{value} is not a valid phone number" }
 
   has_many :categories
+  has_many :expenses
 end
