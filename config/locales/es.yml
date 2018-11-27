@@ -30,16 +30,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Hola mundo"
   api:
     v1:
       categories:
         defaults:
-          groceries: "Groceries"
-          medicine: "Medicine"
-          meal: "Meal"
-          electronic_device: "Electronic device"
-          public_transport: "Public transport"
-          private_transport: "Private transport"
-          house_rent: "House rent"
-          phone_rent: "Phone rent"
+          groceries: "Mercado"
+          medicine: "Medicina"
+          meal: "Comida"
+          electronic_device: "Dispositivo electrónico"
+          public_transport: "Transporte público"
+          private_transport: "Transporte privado"
+          house_rent: "Alquiler"
+          phone_rent: "Renta del teléfono"
