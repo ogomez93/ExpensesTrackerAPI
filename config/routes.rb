@@ -5,9 +5,10 @@ Rails.application.routes.draw do
       #   controllers: {
       #     sessions: 'api/v1/devise_token_auth/sessions'
       #   }
-      resources :users
-      resources :categories
-      resources :expenses
+      resources :users do
+        resources :categories
+        resources :expenses
+      end
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
