@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_27_234955) do
+ActiveRecord::Schema.define(version: 2018_11_30_234644) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 2018_11_27_234955) do
     t.datetime "updated_at", null: false
     t.string "username"
     t.string "slug"
+    t.string "password_digest"
     t.index ["slug"], name: "index_users_on_slug", unique: true
   end
 

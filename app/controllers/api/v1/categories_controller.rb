@@ -1,11 +1,12 @@
 class Api::V1::CategoriesController < ApplicationController
   before_action :set_user
+  before_action :set_default_categories, only: [:index]
   before_action :set_category, only: [:show, :update, :destroy]
 
   # GET /api/v1/users/:slug/categories
   # GET /api/v1/users/:slug/categories.json
   def index
-    @categories = @user.categories
+    @categories = @user.categories + @default_categories
   end
 
   # GET /api/v1/users/:slug/categories/1
@@ -49,6 +50,10 @@ class Api::V1::CategoriesController < ApplicationController
 
     def set_category
       @category = Category.find(params[:id])
+    end
+
+    def set_default_categories
+      @default_categories = Category.get_defaults
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

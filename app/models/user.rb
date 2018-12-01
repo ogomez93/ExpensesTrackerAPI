@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   extend FriendlyId
+  has_secure_password
   friendly_id :username, use: :slugged
 
   validates :name, :last_name, :email, :phone_number, presence: true
