@@ -1,5 +1,6 @@
 class Api::V1::CategoriesController < ApplicationController
   before_action :set_user
+  before_action :authenticate_user!
   before_action :set_default_categories, only: [:index]
   before_action :set_category, only: [:show, :update, :destroy]
 

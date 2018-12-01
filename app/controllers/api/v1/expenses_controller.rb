@@ -1,5 +1,6 @@
 class Api::V1::ExpensesController < ApplicationController
   before_action :set_user
+  before_action :authenticate_user!
   before_action :set_expense, only: [:show, :update, :destroy]
 
   # GET /api/v1/users/:slug/expenses
